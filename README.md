@@ -49,38 +49,6 @@ You can also see a complete technical diagram in Mermaid syntax in `SLM_Architec
 
 * **Learning Rate Schedule**: Implements a `LinearLR` warmup followed by a `CosineAnnealingLR` decay for stable training.
 
-## How to Run
-
-1. **Install Dependencies:**
-
-```
-
-pip install transformers datasets accelerate tiktoken torch
-
-```
-
-2. **Run the Training Script:**
-Execute the main Python script (e.g., in a Colab notebook or as a `.py` file).
-
-```
-
-python Finetuning\_SLM\_for\_Text\_Transformation.py
-
-```
-
-The script will automatically:
-
-1. Download and process the `roneneldan/TinyStories` dataset.
-
-2. Create `train.bin` and `validation.bin` files.
-
-3. Start the training loop for 20,000 iterations.
-
-4. Evaluate the model every 500 steps and save the best-performing weights to `best_model_params.pt`.
-
-5. Plot the training and validation loss curves.
-
-6. Run inference on two example prompts using the best saved model.
 
 ## Results & Analysis
 
